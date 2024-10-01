@@ -34,11 +34,11 @@ class UserInfoScreen extends StatelessWidget {
             ),
             const Gap(12),
             ElevatedButton(onPressed: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MovieListScreen(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const MovieListScreen(),));
             }, child: const Text('ENTER MOVIE LIST')),
             const Gap(12),
             ElevatedButton(onPressed: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MovieListScreen(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const MovieListScreen(),));
             }, child: const Text('ENTER COLOR PICKER')),
           ],
         ),
