@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:task_state_management_2/provider/auth.dart';
 import 'package:task_state_management_2/provider/movie.dart';
+import 'package:task_state_management_2/provider/theme.dart';
+import 'package:task_state_management_2/screens/color_picker_screen.dart';
 import 'package:task_state_management_2/screens/favorite_list.dart';
 import 'package:task_state_management_2/screens/movie_list_screen.dart';
 import 'package:task_state_management_2/screens/sign_in_screen.dart';
@@ -17,9 +19,10 @@ void main() async{
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => Auth(),),
+        ChangeNotifierProvider(create: (context) => ThemeProvider(),),
         ChangeNotifierProvider(create: (context) => Movie(),)
       ],
-      child:  MyApp(isLoggedIn: isLoggedIn,),
+      child: MyApp(isLoggedIn: isLoggedIn,),
     ),
   );
 }
@@ -33,7 +36,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: isLoggedIn? const MovieListScreen() : const SignInScreen(),
+      // home: isLoggedIn? const MovieListScreen() : const SignInScreen(),
+      home: ColorPickerScreen(),
     );
   }
 }
