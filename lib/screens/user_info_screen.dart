@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:task_state_management_2/provider/auth.dart';
+import 'package:task_state_management_2/screens/color_picker_screen.dart';
 import 'package:task_state_management_2/screens/movie_list_screen.dart';
 import 'package:task_state_management_2/screens/sign_in_screen.dart';
 
@@ -38,7 +39,7 @@ class UserInfoScreen extends StatelessWidget {
             }, child: const Text('ENTER MOVIE LIST')),
             const Gap(12),
             ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const MovieListScreen(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const ColorPickerScreen(),));
             }, child: const Text('ENTER COLOR PICKER')),
           ],
         ),

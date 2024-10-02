@@ -36,8 +36,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      // home: isLoggedIn? const MovieListScreen() : const SignInScreen(),
-      home: ColorPickerScreen(),
+      home: isLoggedIn? const UserInfoScreen() : const SignInScreen(),
     );
   }
 }
